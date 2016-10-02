@@ -54,9 +54,10 @@ struct SimonSays {
     var colorToDisplay = 0
     let numberOfColorsToMatch: Int
     
+    // initializes SimonSays with 5 as the number of colors to match
     init(numberOfColorsToMatch: Int = 5) {
         self.numberOfColorsToMatch = numberOfColorsToMatch
-        
+    // for the each count of toMatch, creates a random number between 1 and 4 and passes that to Color which checks it against it's switch, then it adds that string to the  patternToMatch array.
         for _ in (0..<numberOfColorsToMatch) {
             let randomNumber = Int(arc4random_uniform(4))
             let randomColor = Color(rawValue: randomNumber)!
